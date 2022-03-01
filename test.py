@@ -13,9 +13,9 @@ from repvgg import get_RepVGG_func_by_name
 from utils import load_checkpoint, get_default_ImageNet_val_loader
 
 parser = argparse.ArgumentParser(description='PyTorch ImageNet Test')
-parser.add_argument('data', metavar='DIR', help='path to dataset')
-parser.add_argument('mode', metavar='MODE', default='train', choices=['train', 'deploy'], help='train or deploy')
-parser.add_argument('weights', metavar='WEIGHTS', help='path to the weights file')
+parser.add_argument('-d','--data', metavar='DIR', default='./imagenet', help='path to dataset')
+parser.add_argument('-m', '--mode', metavar='MODE', default='train', choices=['train', 'deploy'], help='train or deploy')
+parser.add_argument('-w', '--weights', metavar='WEIGHTS',default=r'C:\Users\wjy\Desktop\RepVGG代码\REPVGG\RepVGG-A0-train.pth', help='path to the weights file')
 parser.add_argument('-a', '--arch', metavar='ARCH', default='RepVGG-A0')
 parser.add_argument('-j', '--workers', default=4, type=int, metavar='N',
                     help='number of data loading workers (default: 4)')
